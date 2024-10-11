@@ -5,24 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMKN KANDEMAN</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .form-control:focus {
+            border-color: red; /* Warna border menjadi merah */
+            box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25); /* Bayangan merah */
+        }
+    </style>
 </head>
-<body>
+<body data-bs-theme="dark">
     <div class="container-sm">
-        <div class="pt-5">
+        <img src="img/LogoWhite.png" alt="applewifiid" class="img-fluid mt-5 text-start" style="max-width: 40%;">
+        <div class="pt-3">
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" placeholder="username">
+                <div class="input-group">
+                    <span class="input-group-text" id="username"><i class='bx bxs-user' style='color:#ffffff' ></i></i></span>
+                    <input type="text" class="form-control" id="username" placeholder="username">
+                </div>
             </div>
-
-            <label for="password" class="form-label">Password</label>
-            <input type="password" id="password" class="form-control" aria-describedby="passwordHelpBlock">
-            <div id="passwordHelpBlock" class="form-text">
-              Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+            <div class="mb3">
+                <label for="password" class="form-label">Password</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="password"><i class='bx bxs-lock'></i></i></span>
+                    <input type="password" class="form-control" id="password">
+                </div>
             </div>
-
-            <div class="col-auto m-auto">
-                <button type="submit" class="btn btn-primary mb-3">Login</button>
-              </div>
+            <div class="d-flex justify-content-center m-4">
+                <button type="submit" class="btn btn-danger mb-3 w-50">Login</button>
+            </div>
         </div>
     </div>
     <style src="js/bootstrap.min.js"></style>
